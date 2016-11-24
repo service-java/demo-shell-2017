@@ -1,0 +1,370 @@
+bash: 无法设定终端进程组(26088): 对设备不适当的 ioctl 操作
+bash: 此 shell 中无任务控制
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+Hello World !
+mozhiyan
+mozhiyan
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+Hello World !
+mozhiyan
+mozhiyan
+I am good at AdaScript
+I am good at CoffeScript
+I am good at ActionScript
+I am good at JavaScript
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+Hello World !
+mozhiyan
+mozhiyan
+I am good at AdaScript
+I am good at CoffeScript
+I am good at ActionScript
+I am good at JavaScript
+hello.sh: 15: hello.sh: Syntax error: "do" unexpected
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ gedit memo/shell.md
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+Hello World !
+mozhiyan
+mozhiyan
+I am good at AdaScript
+I am good at Ada Script
+I am good at CoffeScript
+I am good at Coffe Script
+I am good at ActionScript
+I am good at Action Script
+I am good at JavaScript
+I am good at Java Script
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+Hello World !
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+hello.sh: 27: hello.sh: myUrl: is read only
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+hello.sh: 30: hello.sh: myUrl: is read only
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+hello.sh: 30: unset: myUrl: is read only
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+output: http://see.xidian.edu.cn/cpp/shell/
+hello.sh: 32: hello.sh: myUrl: is read only
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+http://see.xidian.edu.cn/cpp/linux/
+http://see.xidian.edu.cn/cpp/shell/
+output: 
+http://see.xidian.edu.cn/cpp/u/xitong/
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello.sh
+hello.sh: 37: hello.sh: 27598: not found
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+./hello.sh: 行 37: 27599: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+./hello.sh: 行 37: 27619$: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+./hello.sh: 行 37: 27649: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ cat hello.sh
+#!/bin/bash
+# echo "Hello World !"
+
+# 使用一个定义过的变量，只要在变量名前面加美元符号（$）即可------
+# your_name="mozhiyan"
+# echo $your_name
+# echo ${your_name}
+
+# 变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界
+# 推荐给所有变量加上花括号，这是个好的编程习惯。-------------------
+# for skill in Ada Coffe Action Java 
+# do
+#     echo "I am good at ${skill}Script"
+#     echo "I am good at $skill Script"
+# done
+
+# 已定义的变量，可以被重新定义
+# but不能写 $myUrl="http://see.xidian.edu.cn/cpp/shell/"-----------
+# myUrl="http://see.xidian.edu.cn/cpp/linux/"
+# echo ${myUrl}
+# myUrl="http://see.xidian.edu.cn/cpp/shell/"
+# echo ${myUrl}
+
+# 只读变量---------------
+# myUrl="http://see.xidian.edu.cn/cpp/shell/"
+# readonly myUrl
+# myUrl="http://see.xidian.edu.cn/cpp/danpianji/"
+
+# 删除变量-------------
+# unset myUrl
+# echo "output: $myUrl"
+# myUrl="http://see.xidian.edu.cn/cpp/u/xitong/"
+# echo $myUrl
+
+# Shell特殊变量
+# $ 表示当前Shell进程的ID-------------
+$echo $$
+
+
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ cat hello.sh
+#!/bin/bash
+# echo "Hello World !"
+
+# 使用一个定义过的变量，只要在变量名前面加美元符号（$）即可------
+# your_name="mozhiyan"
+# echo $your_name
+# echo ${your_name}
+
+# 变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界
+# 推荐给所有变量加上花括号，这是个好的编程习惯。-------------------
+# for skill in Ada Coffe Action Java 
+# do
+#     echo "I am good at ${skill}Script"
+#     echo "I am good at $skill Script"
+# done
+
+# 已定义的变量，可以被重新定义
+# but不能写 $myUrl="http://see.xidian.edu.cn/cpp/shell/"-----------
+# myUrl="http://see.xidian.edu.cn/cpp/linux/"
+# echo ${myUrl}
+# myUrl="http://see.xidian.edu.cn/cpp/shell/"
+# echo ${myUrl}
+
+# 只读变量---------------
+# myUrl="http://see.xidian.edu.cn/cpp/shell/"
+# readonly myUrl
+# myUrl="http://see.xidian.edu.cn/cpp/danpianji/"
+
+# 删除变量-------------
+# unset myUrl
+# echo "output: $myUrl"
+# myUrl="http://see.xidian.edu.cn/cpp/u/xitong/"
+# echo $myUrl
+
+# Shell特殊变量
+# $ 表示当前Shell进程的ID-------------
+$echo $$
+
+
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+./hello.sh: 行 37: 27653: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+./hello.sh: 行 37: 27664: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+27691
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+27729
+./hello.sh
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+27749
+./hello.sh
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+27859
+./hello.sh
+
+0
+
+
+0
+27859
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+File Name: ./hello.sh
+First Parameter : 
+First Parameter : 
+Quoted Values: 
+Quoted Values: 
+Total Number of Parameters : 0
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh
+Hello World !
+File Name: ./hello.sh
+First Parameter : 
+First Parameter : 
+Quoted Values: 
+Quoted Values: 
+Total Number of Parameters : 0
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh Zara Ali
+Hello World !
+File Name: ./hello.sh
+First Parameter : Zara
+First Parameter : Ali
+Quoted Values: Zara Ali
+Quoted Values: Zara Ali
+Total Number of Parameters : 2
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh "a" "b" "c" "d"
+Hello World !
+File Name: ./hello.sh
+First Parameter : a
+First Parameter : b
+Quoted Values: a b c d
+Quoted Values: a b c d
+Total Number of Parameters : 4
+$*= a b c d
+"$*"= a b c d
+$@= a b c d
+"$@"= a b c d
+print each param from $*
+a
+b
+c
+d
+print each param from $@
+a
+b
+c
+d
+print each param from "$*"
+a b c d
+print each param from "$@"
+a
+b
+c
+d
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello.sh 
+Hello World !
+./hello.sh: 行 112: 0: 未找到命令
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+-e Value of a is 10 
+
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Value of a is 10 
+
+-e Value of a is 10 
+
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ chmod +x *.sh
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Value of a is 10
+
+-e Value of a is 10 
+
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Date is 2016年 11月 23日 星期三 17:20:47 CST
+Logged in user are 1
+Uptime is 2016年 11月 23日 星期三 17:20:47 CST
+ 17:20:47 up  3:26,  1 user,  load average: 0.80, 0.63, 0.71
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Variable is not set
+1 - Value of var is 
+Variable is not set
+2 - Value of var is Variable is not set
+
+3 - Value of var is 
+This is default value
+4 - Value of var is Prefix
+Prefix
+5 - Value of var is Prefix
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Total value : 4
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+Total value : 2+2
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+hello-again.sh: 78: [: 10: unexpected operator
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is equal to b
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is equal to b
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+hello-again.sh: 78: [: 10: unexpected operator
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+hello-again.sh: 78: [: 10: unexpected operator
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is equal to b
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ sh hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+hello-again.sh: 79: hello-again.sh: [10: not found
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+./hello-again.sh: 第 79 行: [: 缺少 `]'
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./hello-again.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is not equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./shell-operation.sh
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is not equal to b
+10 -eq 20: a is not equal to b
+10 -ne 20: a is not equal to b
+10 -gt 20: a is not greater than b
+10 -lt 20: a is less than b
+10 -ge 20: a is not greater or equal to b
+10 -le 20: a is less or  equal to b
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./shell-operation.sh
+10 != 20 : a is not equal to b
+10 -lt 100 -a 20 -gt 15 : returns true
+10 -lt 100 -o 20 -gt 100 : returns true
+10 -lt 100 -o 20 -gt 100 : returns false
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./shell-operation.sh
+abc = efg: a is not equal to b
+abc != efg : a is not equal to b
+-z abc : string length is not zero
+-n abc : string length is not zero
+abc : string is not empty
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ ./shell-operation.sh
+File has read access
+File has write permission
+File has execute permission
+File is an ordinary file
+This is not a directory
+File size is zero
+File exists
+]0;luo0412@luo0412-Compaq-510: ~/shell-projectluo0412@luo0412-Compaq-510:~/shell-project$ 
