@@ -1,68 +1,47 @@
 #!.bin.bash
-# 显示转义字符===============
+# 显示转义字符====
+# echo "\"It is a test\"" # "It is a test"
 
-echo "\"It is a test\""
 
-# 结果将是：
-# "It is a test"
+# get var
+# name="OK"
+# echo "$name It is a test" # OK It is a test
 
-# 显示变量=========
-name="OK"
-echo "$name It is a test"
-
-# 结果将是：
-# OK It is a test
 
 
 # 如果变量与其它字符相连的话，需要使用大括号（{ }）：
-mouth=8
-echo "${mouth}-1-2009"
+# mouth=8
+# echo "${mouth}-1-2009" # 8-1-2009
 
-# 结果将是：
-# 8-1-2009
 
-# 显示换行
 
-echo "OK!\n"
-echo "It is a test"
+# 显示换行or not====
+# echo "OK!\n"
+# echo "It is a test" # will be a blank line
+# echo "OK!\c"
+# echo "It is a test" # OK!It si a test
 
- # 显示不换行
 
-echo "OK!\c"
-echo "It is a test"
-
-# 输出：
-# OK!It si a test
 
 # 显示结果重定向至文件 ========
-echo "It is a test" > myfile.txt
-# the result wiil be stored in myfile.txt
-
-
-# 原样输出字符串
-# 若需要原样输出字符串（不进行转义），请使用单引号。例如：
-
-echo '$name\"'
-
-# 显示命令执行结果
-
-echo `date`
-
-# 结果将显示当前日期
-# 2016年 11月 24日 星期四 21:41:27 CST
+# echo "hand feat" > myfile.txt # the result wiil be stored in myfile.txt
 
 
 
+# 使用单引号原样输出=====
+echo '$name\"' # output: $name\"
 
 
-# printf 命令用于格式化输出==========================
-# 是echo命令的增强版。
-# 它是C语言printf()库函数的一个有限的变形，并且在语法上有些不同。
+
+# 显示命令执行结果===
+echo `date` # 2016年 11月 24日 星期四 21:41:27 CST
+
+
+
+# printf用于格式化输出, echo增强版。
 # printf 由 POSIX 标准所定义，移植性要比 echo 好
-# 必须显式添加换行符(\n)
+# but必须显式添加换行符(\n)
 printf "Hello, Shell\n"
-# output
-# Hello, Shell
 
 
 
@@ -80,15 +59,16 @@ printf "Hello, Shell\n"
 printf "%d %s\n" 1 "abc"
 # 1 abc
 
-# 单引号与双引号效果一样 
-printf '%d %s\n' 1 "abc" 
+# 单引号与双引号效果一样
+printf '%d %s\n' 1 "abc"
 # 1 abc
 
 # 没有引号也可以输出
 printf %s abcdef
 # abcdef
 
-# 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用
+# 格式只指定了一个参数，
+# 但多出的参数仍然会按照该格式输出，format-string 被重用
 printf %s abc def
 # abcdef
 
@@ -103,7 +83,7 @@ printf "%s %s %s\n" a b c d e f g h i j
 # j
 
 # 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替
-printf "%s and %d \n" 
+printf "%s and %d \n"
 # and 0
 
 # 如果以 %d 的格式来显示字符串，那么会有警告，提示无效的数字，此时默认置为 0
