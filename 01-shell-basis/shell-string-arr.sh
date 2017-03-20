@@ -1,5 +1,5 @@
 #!/bin/bash
-# 拼接字符串 ==================
+# 拼接字符串
 your_name="qinjx"
 greeting="hello, "$your_name" !"
 greeting_1="hello, ${your_name} !"
